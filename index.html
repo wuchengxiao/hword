@@ -1,9 +1,52 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>我的第一个网站</title>
-</head>
-<body>
-  <h1>Hello GitHub Pages!</h1>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Read Word Files</title>
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+    <body>
+        <div class="head">
+            <h1>Read Word Files</h1>
+            <div class="right">
+                <input type="file" id="fileInput" accept=".docx" multiple>
+                <div class="query input-normal">
+                    <input type="text" placeholder="输入查询内容"/>
+                    <button class="btn-query" onclick="doQuery()">查询</button>
+                    <span class="query-count"></span>
+                    <button class="btn-query" onclick="lastResult()">上一个</button>
+                    <button class="btn-query" onclick="nextResult()">下一个</button>
+                    <div class="query history">
+                        历史查询：
+                
+                        
+                        <span>
+                            <a href="javascript:doQueryHis('a')">a</a>
+                        </span>
+                        <span>
+                            <a href="javascript:doQueryHis('abcd')">abcd</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="files-list">
+                <h2>Files</h2>
+                <ul id="fileList"></ul>
+            </div>
+            <div class="content-area">
+                <h2>Content</h2>
+                <div id="contentArea"></div>
+            </div>
+            <div class="query-result">
+                <h2>Query Result</h2>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+        <!-- Optional, for handling Blob URLs -->
+        <script src="index.js"></script>
+    </body>
 </html>
