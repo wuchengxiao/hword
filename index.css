@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 16px);
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 0 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+.head .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+}
+
+.container .highlight {
+    background-color: yellow;
+}
+
+.files-list {
+    width: 20%;
+    padding: 8px;
+    border-right: 1px solid #ccc;
+    resize: horizontal;
+    overflow: auto;
+}
+
+.files-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.files-list li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.files-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.content-area {
+    padding: 8px;
+    height: calc(100% - 20px);
+    overflow: auto;
+    resize: horizontal;
+    width: 70%;
+}
+
+.query-result {
+    border-left: 1px solid #ccc;
+    padding: 8px;
+    resize: horizontal;
+    overflow: auto;
+    width: 30%;
+}
+
+.query-result .item + .item {
+    margin-top: 20px;
+}
+
+.query.history {
+    margin-top: 4px;
+    height: 24px;
+    line-height: 24px;
+    font-size: small;
+    display: none;
+}
+
+.query.history span {
+    background-color: #ccc;
+    padding: 2px;
+}
+
+/* input */
+.input-normal input {
+    height: 20px;
+}
+
+.input-normal button {
+    height: 26px;
+}
+
+.input-large input {
+    height: 30px;
+}
+
+.input-large button {
+    height: 36px;
+}
+
+/* input end */
+/* query result */
+.query-result .item .label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.query-result .item .detail {
+    line-height: 24px;
+}
+
+.query-result .item .detail .row {
+    display: flex;
+}
+
+.query-result .item .detail .index {
+    width: 20px;
+    background-color: #ccc;
+    margin-right: 4px;
+}
+
+.query-result .item .detail .content {
+    width: calc(100% - 28px);
+}
+
+.query-result .item .detail .detail-item {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* query result end */
