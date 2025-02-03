@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 16px);
+    width: calc(max(1000px, 100vw) - 16px);
 }
 
 .head {
